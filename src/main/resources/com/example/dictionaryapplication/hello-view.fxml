@@ -7,13 +7,15 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxWidth="1.7976931348623157E308" prefHeight="401.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionaryapplication.DictionaryController">
    <children>
-      <TabPane layoutY="1.0" prefHeight="400.0" prefWidth="600.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutY="1.0" prefHeight="400.0" prefWidth="600.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="50.0" tabMaxWidth="50.0" tabMinHeight="50.0" tabMinWidth="50.0">
         <tabs>
           <Tab closable="false" text="Search ">
                <content>
@@ -30,8 +32,8 @@
                                                 <Font name="System Bold" size="20.0" />
                                              </font>
                                           </Label>
-                                          <TextField prefHeight="30.0" prefWidth="162.0" />
-                                          <ListView prefHeight="352.0" prefWidth="162.0" />
+                                          <TextField fx:id="searchInput" onAction="#lookUp" onKeyReleased="#getSearchInput" prefHeight="30.0" prefWidth="162.0" />
+                                          <ListView fx:id="listView" onKeyReleased="#getSearchInput" prefHeight="352.0" prefWidth="162.0" />
                                        </children>
                                     </VBox>
                                  </children>
@@ -49,7 +51,7 @@
                                              <font>
                                                 <Font name="System Italic" size="12.0" />
                                              </font></Label>
-                                          <TextArea prefHeight="332.0" prefWidth="384.0" />
+                                          <TextArea fx:id="textArea" prefHeight="332.0" prefWidth="334.0" />
                                        </children>
                                     </VBox>
                                  </children>
@@ -59,8 +61,64 @@
                      </children>
                   </AnchorPane>
                </content>
+               <graphic>
+                  <ImageView fitHeight="46.0" fitWidth="46.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@Icon/122932.png" />
+                     </image></ImageView>
+               </graphic>
             </Tab>
-          <Tab text="Untitled Tab 2" />
+          <Tab text="Untitled Tab 2">
+               <graphic>
+                  <ImageView fitHeight="93.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/clock-event-history-schedule-time-undo-icon--7.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="400.0" prefWidth="551.0" />
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+            <Tab text="Untitled Tab">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+               <graphic>
+                  <ImageView fitHeight="56.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/73814.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab text="Untitled Tab">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/1159633.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab text="Untitled Tab">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+               <graphic>
+                  <ImageView fitHeight="56.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/109733.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
         </tabs>
       </TabPane>
    </children>

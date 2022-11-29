@@ -17,7 +17,7 @@ public class DictionaryManagement {
                 String line = sc.nextLine();
                 String[] s = line.split("\t");
                 dictionary.words.add(new Word(s[0], s[1]));
-                System.out.println(s[0] + " " + s[1]);
+              //  System.out.println(s[0] + " " + s[1]);
             }
             System.out.println("Success");
         } catch (Exception e) {
@@ -37,7 +37,7 @@ public class DictionaryManagement {
         for(Word word: dictionary.words) {
             if(word.getWordTarget().startsWith(prefix)) {
                 list.add(word.getWordTarget());
-                System.out.println(word.getWordTarget());
+              //  System.out.println(word.getWordTarget());
             }
         }
         return list;

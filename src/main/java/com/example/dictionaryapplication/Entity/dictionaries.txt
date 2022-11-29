@@ -2,3 +2,6 @@ hello	xin chao
 hi	hi
 dog	cho
 cat	meo
+lie noi doi
+laugh   cuoi
+low     thap
